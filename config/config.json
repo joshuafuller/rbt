@@ -1,77 +1,69 @@
 {
-    "options": {
-        "paths": {
-            "root": "",
-            "fonts": "../fonts",
-            "mbtiles": "../data",
-            "styles": "../styles"
-        },
-	"serveStaticMaps": true,
-	"formatQuality": {
-		"jpeg": 100,
-		"webp": 100,
-		"png": 100
-	},
-	"maxScaleFactor": 4,
-	"maxSize": 8192,
-	"minRendererPoolSizes": [16,8,4],
-	"maxRendererPoolSizes": [16,8,4],
-	"pbfAlias": "pbf",
-        "serveAllFonts": true
+  "options": {
+    "paths": {
+      "root": "",
+      "fonts": "../fonts",
+      "mbtiles": "../data",
+      "styles": "../styles"
     },
-    "data": {
-        "RBT": {
-		"mbtiles": "rbt_europe.mbtiles"
-        },
-        "HILLSHADE": {
-		"mbtiles": "hillshade_europe.mbtiles"
-        },
-	"LANDCOVER": {
-		"mbtiles": "landcover_europe.mbtiles"
-	}
+    "formatQuality": {
+      "jpeg": 100,
+      "webp": 100,
+      "png": 100
     },
-    "styles": {
-        "RBT-TPC-3395": {
-            "style": "RBT-TPC-3395/style.json",
-            "serve_data": true,
-            "serve_rendered": true,
-            "tilejson": {
-                "format": "png",
-                "bounds": [
-                    -180,
-                    -80,
-                    180,
-                    84
-                ]
-            }
-        },
-        "RBT-JOG-3395": {
-            "style": "RBT-JOG-3395/style.json",
-            "serve_data": true,
-            "serve_rendered": true,
-            "tilejson": {
-                "format": "png",
-                "bounds": [
-                    -180,
-                    -80,
-                    180,
-                    84
-                ]
-            }
-        },
-        "RBT-TLM-3395": {
-            "style": "RBT-TLM-3395/style.json",
-            "serve_data": true,
-            "serve_rendered": true,
-            "tilejson": {
-                "format": "png",
-                "bounds": [
-                    -180,
-                    -80,
-                    180,
-                    84
-                ]
-            }
-        }
+    "tileMargin": 0,
+    "pbfAlias": "pbf",
+    "maxSize": 2048,
+    "minRendererPoolSizes": [8, 4, 2],
+    "maxRendererPoolSizes": [8, 4, 2],
+    "pbfAlias": "pbf",
+    "serveAllFonts": true,
+    "serveAllStyles": true,
+    "serveStaticMaps": true
+  },
+  "data": {
+    "CULTURAL": {
+      "mbtiles": "cultural-3395.mbtiles"
+    },
+    "HILLSHADE": {
+      "mbtiles": "hillshade-3395.mbtiles"
+    },
+    "PHYSICAL": {
+      "mbtiles": "physical-3395.mbtiles"
     }
-}
+  },
+  "styles": {
+    "RBT-TOPO-3395": {
+      "style": "RBT-TOPO-3395/style.json",
+      "serve_data": true,
+      "serve_rendered": true,
+      "tilejson": {
+        "format": "png",
+        "bounds": [-180, -80, 180, 84]
+      }
+    },
+    "RBT-TOPO-3DBLDG-3395": {
+      "style": "RBT-TOPO-3DBLDG-3395/style.json",
+      "serve_data": true,
+      "serve_rendered": false
+    },
+    "RBT-DARK-3395": {
+      "style": "RBT-DARK-3395/style.json",
+      "serve_data": true,
+      "serve_rendered": true,
+      "tilejson": {
+        "format": "png",
+        "bounds": [-180, -80, 180, 84]
+      }
+    },
+    "RBT-OVERLAY-3395": {
+      "style": "RBT-OVERLAY-3395/style.json",
+      "serve_data": true,
+      "serve_rendered": true,
+      "tilejson": {
+        "format": "png",
+        "bounds": [-180, -80, 180, 84]
+      }
+    }
+  }
+} 
